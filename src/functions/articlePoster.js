@@ -14,7 +14,7 @@ export const articlePoster = async(msg) => {
     const date = new Date();
 
     if (nIndex === -1) {
-        title = randomizeTitle;
+        title = randomizeTitle();
         await createNews(token, title, message);
         replyText("Posted!\n" +
             "Please, dont forget to change title for this article in-App");
